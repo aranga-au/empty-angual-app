@@ -20,6 +20,7 @@
 
     <!-- build:css styles/app.css -->
     <!-- inject:css -->
+    <link rel="stylesheet" href="/build/.tmp/styles.css">
     <!-- endinject -->
     <!-- endbuild -->
 </head>
@@ -38,7 +39,7 @@
         </div>
     </div>
 
-    <!-- build:js js/lib.js -->
+    <!-- build:js js/libs.js -->
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
     <script src="/bower_components/angular/angular.js"></script>
@@ -51,11 +52,19 @@
     <!-- endbower -->
     <!-- endbuild -->
 
-    <!-- build:js js/app.js -->
+    <!-- build:js js/sample-app.js -->
     <!-- inject:js -->
+
+    <script src="/src/client/app/app.module.js"></script>
+
+    <script src="/src/client/app/core/core.module.js"></script>
+
     <script src="/src/client/app/layout/layout.module.js"></script>
-    <script src="/src/client/app/app.js"></script>
+
+    <script src="/src/client/app/core/dataservice.js"></script>
+
     <script src="/src/client/app/layout/main.contoller.js"></script>
+
     <!-- endinject -->
 
     <!-- inject:templates:js -->

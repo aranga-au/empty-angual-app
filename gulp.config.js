@@ -1,11 +1,11 @@
 module.exports = function() {
-    var complieJsName = "empty-angular-app"
+    
     var client = './src/client/';
     var server = './src/server/';
     var clientApp = client + 'app/';
-    var report = './report/';
     var root = './';
-    var temp = './.tmp/';
+    var buildDir = './build';
+    var temp = buildDir+'/.tmp/';
     
     var bower = {
         json: require('./bower.json'),
@@ -23,7 +23,7 @@ module.exports = function() {
             './src/**/*.js',
             './*.js'
         ],
-        build: './build/',
+        build: buildDir+'/webapp/',
         client: client,
         css: temp + 'styles.css',
         fonts: bower.directory + 'font-awesome/fonts/**/*.*',
@@ -42,7 +42,6 @@ module.exports = function() {
             '**/*.js'
         ],
         less: client + 'styles/styles.less',
-        report: report,
         root: root,
         server: server,
         source: 'src/',
@@ -52,14 +51,9 @@ module.exports = function() {
          * optimized files
          */
         optimized: {
-            app: complieJsName,
-            lib: 'app-libs.js'
+            app: 'sample-app.js', //same as index.html <!-- build:js js/sample-app.js --> line
+            lib: 'libs.js'
         },
-
-        /**
-         * plato
-         */
-        plato: {js: clientApp + '**/*.js'},
 
         /**
          * browser sync

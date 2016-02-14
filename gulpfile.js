@@ -112,7 +112,9 @@ gulp.task('templatecache', ['clean-code'], function() {
 });
 
 /**
- * Wire-up the bower dependencies
+ * Wire-up the bower dependencies and inject user js to html file.
+ * This will make sure all dependencies are included in the html file
+ * hence avoid manual inclution of the scripts
  * @return {Stream}
  */
 gulp.task('wiredep', function() {
@@ -187,7 +189,7 @@ gulp.task('optimize', ['inject'], function() {
         // Get the custom javascript
         .pipe(jsAppFilter)
         .pipe($.ngAnnotate({add: true}))
-        .pipe($.uglify())
+        //.pipe($.uglify())
         .pipe(getHeader())
         .pipe(jsAppFilter.restore())
         // Get the vendor javascript
@@ -209,9 +211,9 @@ gulp.task('optimize', ['inject'], function() {
  * @param  {Function} done - callback when complete
  */
 gulp.task('clean', function(done) {
-    var delconfig = [].concat(config.build, config.temp, config.report);
+    var delconfig = [].concat(config.build, config.temp);
     log('Cleaning: ' + $.util.colors.blue(delconfig));
-    del(delconfig, done);
+   del(delconfig, done);
 });
 
 /**
@@ -342,7 +344,7 @@ function inject(src, label, order) {
     if (label) {
         options.name = 'inject:' + label;
     }
-
+    log("injecting :"+src);
     return $.inject(orderSrc(src, order), options);
 }
 
