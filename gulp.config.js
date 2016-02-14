@@ -6,7 +6,7 @@ module.exports = function() {
     var report = './report/';
     var root = './';
     var temp = './.tmp/';
-
+    
     var bower = {
         json: require('./bower.json'),
         directory: './bower_components/',
@@ -72,7 +72,7 @@ module.exports = function() {
         templateCache: {
             file: 'templates.js',
             options: {
-                module: 'app.core',
+                module: 'app',
                 root: 'app/',
                 standalone: false
             }
