@@ -4,10 +4,12 @@
 	 .controller('MainController',MainController);
 	 
 	 /* @ngInject */
-	 function MainController($scope,DataService){
+	 function MainController($scope,$timeout,DataService){
 		 var vm = this;
 		 vm.greeting="hello !!";
 		 //
+	
+		 
 	 }
 	
 })();

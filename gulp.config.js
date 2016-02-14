@@ -4,8 +4,10 @@ module.exports = function() {
     var server = './src/server/';
     var clientApp = client + 'app/';
     var root = './';
-    var buildDir = './build';
-    var temp = buildDir+'/.tmp/';
+    var buildRoot = './build';
+    var buildDir =buildRoot+'/webapp/'
+    var temp = buildRoot+'/tmp/';
+    
     
     var bower = {
         json: require('./bower.json'),
@@ -23,7 +25,7 @@ module.exports = function() {
             './src/**/*.js',
             './*.js'
         ],
-        build: buildDir+'/webapp/',
+        build: buildDir,
         client: client,
         css: temp + 'styles.css',
         fonts: bower.directory + 'font-awesome/fonts/**/*.*',
