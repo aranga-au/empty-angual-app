@@ -5,11 +5,6 @@
         'app.layout',
         'app.core',
         'ui.router',
-        //modules
         'app.home',
-        'app.user'
-    ]);
-
-
-
+        'app.user']);
 })();

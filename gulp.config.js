@@ -25,6 +25,7 @@ module.exports = function() {
             './src/**/*.js',
             './*.js'
         ],
+        vetjs:['./src/client/app/*.js'],
         build: buildDir,
         client: client,
         css: temp + 'styles.css',

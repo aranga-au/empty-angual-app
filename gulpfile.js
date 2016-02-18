@@ -38,7 +38,7 @@ gulp.task('vet', function() {
     log('Analyzing source with JSHint and JSCS');
 
     return gulp
-        .src(config.alljs)
+        .src(config.vetjs)
         .pipe($.if(args.verbose, $.print()))
         .pipe($.jshint())
         .pipe($.jshint.reporter('jshint-stylish', {verbose: true}))
@@ -148,7 +148,7 @@ gulp.task('inject', ['wiredep', 'styles', 'templatecache'], function() {
  * This is separate so we can run tests on
  * optimize before handling image or fonts
  */
-gulp.task('build', ['optimize', 'images', 'fonts'], function() {
+gulp.task('build', ['optimize', 'images', 'fonts','vet'], function() {
     log('Building everything '+appName);
 
     var msg = {
