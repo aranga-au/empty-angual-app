@@ -1,10 +1,12 @@
 (function(){
 	
-	angular.module("app.core",[
+	angular.module('app.core',[
 		'ngSanitize',
 		'ngResource',
-		'toaster',
-		'ngAnimate'
+		'ngAnimate',
+		//modules
+		'common.router',
+		'common.logger'		
 		
 	]);
 })();

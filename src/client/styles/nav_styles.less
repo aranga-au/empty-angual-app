@@ -1,0 +1,68 @@
+
+.nav{
+    float:right;
+}
+.navbar {
+    background-image: none !important;
+    -webkit-text-shadow: none !important;
+    -ms-text-shadow: none !important;
+    text-shadow: none !important;
+    background-color: #808080;
+    color: black;
+    margin: 0px;
+    padding-bottom: 4px;
+    padding-top: 4px;
+    background-color: #808080;
+    width: 100%;
+    display: block;
+    
+}
+
+.nav-pills > li{ 
+   &> a{
+        padding: 8px 8px;
+        background-color:#808080 ;
+        color: black;          
+        
+    &:visited{
+            background-color:#808080 ;
+            color: black; 
+    }
+    &:focus{
+                    background-color:#808080 ;
+            color: black; 
+    }
+    &:hover,:active{
+        background: black;
+        color: #808080;
+    }
+    &:selected{
+        background-color:#808080 ;
+        color: black; 
+    }
+   }
+   &>span{
+     .navitem();       
+   }
+    &>span.fa{
+     display: inline-block;
+     margin-top: 2px;   
+     .navitem();       
+   }  
+ 
+}
+.navbar > ul >li:last-of-type{
+            
+            display: inline-block;
+            padding: 10px;
+}
+.border{
+    border: 1px solid #f88529;
+}
+
+
+.navitem(){
+
+    background-color:#808080 ;
+    color: black;   
+}

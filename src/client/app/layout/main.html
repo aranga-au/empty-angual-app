@@ -1,3 +1,8 @@
 <div ng-controller="MainController as vm">
- 	{{vm.greeting}}
+	<header>
+		<an-menu-bar menuitems="vm.menuItems" />
+	</header>
+	<section class="content">
+		<div ui-view=""></div>
+	</section>
 </div>

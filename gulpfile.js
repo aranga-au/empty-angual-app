@@ -53,7 +53,7 @@ gulp.task('vet', function() {
  */
 gulp.task('styles', ['clean-styles'], function() {
     log('Compiling Less --> CSS');
-
+    log(config.less);
     return gulp
         .src(config.less)
         .pipe($.plumber()) // exit gracefully if something fails after this
