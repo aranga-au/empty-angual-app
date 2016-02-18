@@ -1,9 +1,11 @@
 {
   "name": "sample-angular-app",
   "description": "clone  from aranga-au/sample-angular-app;just another scafolding app for angular !!",
+  "author": "Aranga Nanayakkara",
   "repository": {
     "url": "git@github.com:aranga-au/empty-angular-app.git"
   },
+  "license": "MIT",
   "version": "0.0.0",
   "scripts": {
     "init": "npm install",

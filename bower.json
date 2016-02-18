@@ -2,8 +2,11 @@
   "name": "empty-angular-app",
   "version": "0.0.1",
   "description": "Empty app to boost your app dev time;code style",
-  "authors": [],
+  "authors": ["Aranga Nanayakkara"],
   "license": "MIT",
+  "repository": {
+    "url": "git@github.com:aranga-au/empty-angular-app.git"
+  },
   "ignore": [
     "**/.*",
     "node_modules",
