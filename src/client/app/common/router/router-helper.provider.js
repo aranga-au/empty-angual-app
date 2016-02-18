@@ -54,7 +54,7 @@
                 state.config.resolve =
                         angular.extend(state.config.resolve || {}, config.resolveAlways)  
                 $stateProvider.state(state.state, state.config);
-                Logger.debug(state);
+                //Logger.debug(state);
             });
             if (otherwisePath && !hasOtherwise) {
                 hasOtherwise = true;

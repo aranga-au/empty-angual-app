@@ -4,10 +4,13 @@
 		
 		<div class="navbar">
 			<ul class="nav nav-pills">
-				<li ng-repeat="item in vm.menuItems"><a ui-sref="{{item.url}}" ng-bind-html="item.label"></a><li>	
+				<li ng-repeat="item in vm.menuItems">
+					<a ui-sref="{{item.url}}" ng-bind-html="item.label"  ng-class="vm.isCurrent(item.label)"></a>
+				<li>	
 			</ul>
 		</div>
 	</header>
+	
 	<section class="content">
 		<div ui-view ></div>
 	</section>

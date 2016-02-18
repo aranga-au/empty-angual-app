@@ -4,8 +4,9 @@
 	
 	
 	/* @ngInject */
-	function HomeController(){
+	function HomeController(Logger){
 		var vm = this;
 		vm.message="Home Screen @ your service";
+		Logger.debug("home controller");
 	}
 })();

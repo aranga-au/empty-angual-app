@@ -1,5 +1,7 @@
 
-
+.nav{
+    padding-left: 10px;
+}
 .navbar {
     background-image: none !important;
     -webkit-text-shadow: none !important;
@@ -15,29 +17,21 @@
     display: block;
     
 }
-
 .nav-pills > li{ 
+   & > a.selected{
+       background-color: black;
+       color: #808080;
+    
+   
+   }
    &> a{
         padding: 8px 8px;
         background-color:#808080 ;
         color: black;          
-        
-    &:visited{
-            background-color:#808080 ;
-            color: black; 
-    }
-    &:focus{
-                    background-color:#808080 ;
-            color: black; 
-    }
-    &:hover,:active{
-        background: black;
-        color: #808080;
-    }
-    &:selected{
-        background-color:#808080 ;
-        color: black; 
-    }
+       &:hover,&:focus{
+            background: black;
+            color: #808080;
+        }
    }
    &>span{
      .navitem();       
@@ -49,6 +43,7 @@
    }  
  
 }
+
 .navbar > ul >li:last-of-type{
             
             display: inline-block;

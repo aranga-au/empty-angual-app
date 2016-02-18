@@ -309,7 +309,7 @@ gulp.task('bump', function() {
 /**
  * Optimize the code and re-load browserSync
  */
-gulp.task('browserSyncReload', ['optimize'], browserSync.reload);
+gulp.task('browserSyncReload', ['optimize','styles'], browserSync.reload);
 
 ////////////////
 
