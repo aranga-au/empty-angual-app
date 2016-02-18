@@ -1,6 +1,7 @@
 # empty-angular-app
 can you as start of your app.
 NOTE: please make necessory changes to gulp.config.js
+Sample is using ui router
 
 steps 1.
 install all the dependencies
