@@ -4,7 +4,10 @@
     angular.module('app', [
         'app.layout',
         'app.core',
-        'common.logger'
+        'ui.router',
+        //modules
+        'app.home',
+        'app.user'
     ]);
 
 

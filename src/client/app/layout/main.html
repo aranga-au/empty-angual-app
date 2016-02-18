@@ -1,8 +1,14 @@
+
 <div ng-controller="MainController as vm">
 	<header>
-		<an-menu-bar menuitems="vm.menuItems" />
+		
+		<div class="navbar">
+			<ul class="nav nav-pills">
+				<li ng-repeat="item in vm.menuItems"><a ui-sref="{{item.url}}" ng-bind-html="item.label"></a><li>	
+			</ul>
+		</div>
 	</header>
 	<section class="content">
-		<div ui-view=""></div>
+		<div ui-view ></div>
 	</section>
 </div>

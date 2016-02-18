@@ -1,9 +1,9 @@
 (function(){
 	angular.module('app.user')
-	.controller('UserControler',UserController);
+	.controller('UserController',UserController);
 	
 	function UserController(){
 		var vm=this;
-		vm.message="hello user controller";
+		vm.message="User Screen @ your service";
 	}
 })();

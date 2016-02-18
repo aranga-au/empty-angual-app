@@ -6,6 +6,6 @@
 	/* @ngInject */
 	function HomeController(){
 		var vm = this;
-		vm.message="Welcome";
+		vm.message="Home Screen @ your service";
 	}
 })();

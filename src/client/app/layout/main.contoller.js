@@ -10,7 +10,7 @@
                 $rootScope.showSplash=true;
                         vm.greeting="hello !!";
                         //
-                Logger.debug(routerHelper);
+                Logger.debug(routerHelper.getStates());
                 activate();
                 
                 function activate() {
@@ -26,20 +26,18 @@
                                 $rootScope.showSplash = false;
                         }, 500);
                 }
+        
+                      
                 function getMenuItem()  {
-                        var items=[{
-                                label:"Menu 1",
-                                url:"/menu1"
-                        },
-                        {
-                                label:"Menu 2",
-                                url:"/menu2"
-                        },
-                        {
-                                label:"Menu 3",
-                                url:"/menu3"
-                        }
-                        ];
+                        var items=[];
+                        var states = routerHelper.getStates();
+                        angular.forEach(states,function(v,i){
+                              Logger.debug(v);  
+                              
+                              if (v.data){
+                                  items.push({url:v.name,label:v.data.label});    
+                              }  
+                        });
                         vm.menuItems=items;
                 
                         
