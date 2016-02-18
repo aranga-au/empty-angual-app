@@ -5,14 +5,36 @@
 	
 	
 	/* @ngInject */
-	function DataService($http){
+	function DataService($http,Logger){
 		var service ={
-			getData:getData
+			getUsers:getUsers,
+			getUser:getUser
 		}
 		return service;
 		
-		function getData(){
-			
+		function getUsers(){
+            return $http.get('/api/user/')
+                .then(success)
+                .catch(fail);
+
+            function success(response) {
+                return response.data;
+            }
+
+              
+		}
+		function getUser(id){
+            return $http.get('/api/user/'+id+'/')
+                .then(success)
+                .catch(fail);
+
+            function success(response) {
+                return response.data;
+            }
+		}
+		
+       function fail(e) {
+				Logger.error(e);
 		}
 	}
 	

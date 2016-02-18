@@ -1,1 +1,7 @@
-{{vm.message}}
+<div class="panel panel-default">
+<ul>
+	<li ng-repeat="user in vm.users">
+		<span ng-bind-html="user.firstName+' '+user.lastName"></span>
+	</li>
+</ul>
+</div>
