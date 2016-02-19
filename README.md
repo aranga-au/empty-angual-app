@@ -1,6 +1,21 @@
 # empty-angular-app
 can you as start of your app.
 NOTE: please make necessory changes to gulp.config.js
+###### Apache to work with html5 routes
+
+add inside Directory block in apache conf 
+```
+RewriteEngine On
+  # If an existing asset or directory is requested go to it as it is
+  RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -f [OR]
+  RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -d
+  RewriteRule ^ - [L]
+
+  # If the requested resource doesn't exist, use index.html
+  RewriteRule ^ /index.html
+
+```
+
 
 Sample is using ui router instead of builtin ngRouter.
 
